@@ -8,11 +8,15 @@ request.onload = function(){
     req.onload=function(){
     var data1=JSON.parse(this.response)
     var t=data1.main;
-    
-    
     console.log(t);
-    
-    //console.log(tem);
+    }
+    var req1 = new XMLHttpRequest()
+    req1.open('GET',"http://api.openweathermap.org/data/2.5/weather?q=Afghanistan&appid=c7a9299a3d8da1d910da08bcffb48a3b")
+    req1.send()
+    req1.onload=function(){
+    var data11=JSON.parse(this.response)
+    var t1=data11.coord;
+    console.log(t1);
     }
     console.log(data);
 }
